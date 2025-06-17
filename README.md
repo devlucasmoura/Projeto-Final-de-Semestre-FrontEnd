@@ -21,7 +21,7 @@ Desafios extras concluídos:
 - [Roberta Fernandes Farias Cruz de Oliveira](https://github.com/Kyujus)
 - [Lucas da Silva de Moura](https://github.com/devlucasmoura)
 - [Fabio Sued](https://github.com/FabioSued)
-- [Vitor da Silva]()
+- [Vitor da Silva](https://github.com/Vitonhu)
 - [Flavio]()
 
 ## Demonstração
