@@ -49,7 +49,7 @@ function login() {
       erro.style.textAlign = 'center'
 
     setTimeout(() => {
-      window.location.href = '/index.html';
+      window.location.href = './index.html';
     }, 3000);
   } else {
       erro.innerHTML= "Senha ou Usuário incorretos."
