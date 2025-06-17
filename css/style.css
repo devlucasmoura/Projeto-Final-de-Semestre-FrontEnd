@@ -1,0 +1,134 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  .logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  /* Container do formulário */
+  main {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+  }
+  
+  .form-box {
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-box h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  /* Botão de cadastro */
+  button[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  /* Feedback */
+  .feedback {
+    display: none;
+  }
+  
+  .feedback.show {
+    display: block;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  
+  .footer img {
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .footer a {
+    color: #ccc;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+  
+  .footer .row > div {
+    margin-bottom: 20px;
+  }
+
+  .border-md-left {
+    border-left: 1px solid #444;
+  }
+  
+  .footer a {
+    display: block;
+    color: #ccc;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin: 2px 0;
+  }
+  
+  .footer a:hover {
+    color: #fff;
+  }
+  
+  .footer-bar {
+    height: 6px;
+    background: linear-gradient(to right, #004C99 50%, #E30613 50%);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .form-box {
+      padding: 20px;
+    }
+  
+    .footer .row {
+      text-align: center;
+    }
+  }
+  
