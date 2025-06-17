@@ -1,0 +1,596 @@
+/*estilização global do corpo da página*/
+
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+  }
+ 
+  a {
+    display: block;
+    text-align: left;
+    margin: 10px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #0073e6;
+  }
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+  
+  
+  .logo-topo {
+    height: 60px;
+    width: auto;
+  }
+  
+  .titulo-topo {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #074583;
+    padding: 5px 10px;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 60vh;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .texto-sobre {
+    flex: 1 1 45%;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .texto-sobre h2 {
+    color: #074583;
+    margin-bottom: 10px;
+  }
+  
+  .texto-sobre p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .imagem-sobre {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .imagem-sobre img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+   /* Footer - Lista Inferior (estilo grid) */
+  .lista-inferior {
+    background-color: #31353B;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    text-align: left;
+    padding: 20px 0;
+  }
+  
+  .logo-area {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .logo-area::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .img-coluna {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+  }
+  
+  .coluna {
+    padding: 10px 20px;
+  }
+  
+  .coluna p {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .coluna li {
+    font-size: 15px;
+    color: #ccc;
+    margin: 4px 0;
+    line-height: 1.4;
+  }
+  
+  .coluna li:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .coluna-contato {
+    grid-column: 5 / 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  /* Bordas verticais entre colunas */
+  .lista-inferior > .coluna:nth-child(5n+3),
+  .lista-inferior > .coluna:nth-child(5n+6) {
+    border-left: 2px solid #fff;
+    padding-left: 20px;
+  }
+  
+  /* Barras coloridas finais */
+  .footer-bar {
+    width: 100%;
+  }
+  
+  .footer-bar .barra-inferior.red {
+    background-color: #B40621;
+    height: 25px;
+  }
+  
+  .footer-bar .barra-inferior.blue {
+    background-color: #004A7B;
+    height: 25px;
+  }
+
+  /*Icones do footer (redes sociais)*/
+
+  .img-coluna svg {
+    fill: white;
+    transition: fill 0.3s;
+  }
+  
+  .img-coluna a:hover svg {
+    fill: #B40621;
+  }
+  /* Responsividade básica */
+  @media (max-width: 768px) {
+    .linha-central {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .lista-inferior {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .img-coluna {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .coluna-contato {
+      font-size: 18px;
+    }
+  }
+  
+  /* Modo Escuro */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  
+  body.dark-theme .bloco-cinza {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  body.dark-theme #serviços {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  body.dark-theme .footer-text {
+    color: #ffffff;
+  }
+  
+  body.dark-theme .lista-inferior {
+    background-color: #1c1c1c;
+  }
+  
+  body.dark-theme .coluna li {
+    color: #ccc;
+  }
+  
+  body.dark-theme .coluna li:hover {
+    color: #ffffff;
+  }
+
+  body.dark-theme h2{
+    color: #fff;
+  }
+
+  body.dark-theme #servicos{
+    background-color: #B40621!important;
+  }
+    .head-dark-theme {
+      background-color: #333333;
+      color: white;
+  }
+  .head-dark-theme a {
+    color: white;
+  }
+  .head-dark-theme .dropdown-button {
+    color: white;
+  }
+  .head-dark-theme .active {
+    color: black;
+  }
+  .head-dark-theme img {
+    content: url("/img/telecall-logo-white-1\ 2.png");
+  }
+    /* estilização da barra de navegação*/
+
+  header {
+    display: flex;
+    height: 65px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 3px solid #eee;
+    background-color: #fff
+}
+header nav a {
+    font-size: 1rem;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: #0073e6;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+header img {
+    height: 50px; /* Ajuste altura */
+    width: auto;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    gap: 0;
+}
+
+
+header nav a.active {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+header .user-actions {
+    display: flex;
+    gap: 5px;
+}
+
+header .user-actions a {
+    background-color: #0073e6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+
+}
+
+header .user-actions a:hover {
+    background-color: #005bb5;
+    text-decoration: none;
+}
+#btnNovoUsuario {
+    display: block;
+    background-color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.6s ease;
+
+}
+
+#btnNovoUsuario:hover {
+    background-color: #005bb5;    
+    color: white;
+    
+}
+
+/*estilização da opção dropdown de serviços da barra de navegação */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  top: 5px;
+}
+
+.dropdown-button {
+  background-color: transparent;
+  color: #007BFF;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 0px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border-radius: 0;
+  
+}
+
+.dropdown.show .dropdown-content {
+  display: block;
+}
+.dropdown-button i {
+  margin-left: 8px;
+  transition: transform 0.3s;
+}
+
+.dropdown.show i {
+  transform: rotate(180deg);
+}
+
+/* estilização do menu hamburguer para quando a tela for menor*/
+
+.hamburguer {
+  display: none;
+  cursor: pointer;
+}
+
+.barra {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #B40621 ;
+
+}
+
+.menuMobile {
+  display: flex;
+}
+.coluna-contato a {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+}
+
+/*estilização dos botões de aumentar/diminuir fonte */
+.acessibilidade-fonte {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 0px;
+  background-color: whitesmoke;
+}
+
+.acessibilidade-fonte button {
+  padding: 3px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.textoAcessibilidade {
+  font-size: 16px; 
+  transition: font-size 0.3s ease-in-out; 
+}
+
+.textoAcessibilidade p {
+  font-size: inherit; 
+}
+.textoAcessibilidade .texto-sobre h2 {
+  font-size: 2em;
+}
+
+
+/*media queries para responsividade do site inteiro*/
+
+@media (max-width: 768px) {
+       .hamburguer {
+      display: block;
+    }
+    .hamburguer.active .barra:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburguer.active .barra:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      position: fixed;
+      z-index: 200;
+
+    }
+   .hamburguer.active .barra:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      position: fixed;
+            z-index: 200;
+
+    }
+    .menuMobile {
+       display: flex;
+      position: fixed;
+      right: -100%;
+      top: 10px;
+      gap: 25px;
+      flex-direction: column;
+      background-color: #31353B;
+      width: 100%;
+      align-items: center;
+      transition: 0.3s;
+      z-index: 100;
+    
+    }
+    .menuMobile a {
+      margin: 16px 0;
+      text-align: center;
+    }
+    .menuMobile.active {
+        right: 0;
+    }
+      
+  }
+
+
+
+/* Responsividade para o footer */
+@media (max-width: 768px) {
+  .lista-inferior {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .logo-area {
+    grid-column: auto;
+  }
+
+  .logo-area::after {
+    width: 50%;
+    left: 25%;
+  }
+
+  .img-coluna {
+    grid-column: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .coluna {
+    padding: 10px 0;
+    border-left: none !important;
+  }
+
+  .coluna-contato {
+    grid-column: auto;
+    font-size: 18px;
+  }
+
+  /* Remove bordas verticais em mobile */
+  .lista-inferior > .coluna:nth-child(5n+3),
+  .lista-inferior > .coluna:nth-child(5n+6) {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-coluna {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+/* Responsividade para o conteúdo principal */
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    padding: 10px;
+  }
+
+  .texto-sobre {
+    padding: 15px;
+  }
+
+  .texto-sobre h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .texto-sobre p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .imagem-sobre {
+    padding: 15px;
+  }
+
+  .imagem-sobre img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .texto-sobre h2 {
+    font-size: 1.3em;
+  }
+
+  .texto-sobre p {
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 5px;
+  }
+}
+
