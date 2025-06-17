@@ -9,7 +9,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <script src="/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" type="imagex/png" href="img/iconetab.png">
+    <link rel="shortcut icon" type="imagex/png" href="/img/iconetab.png">
 
 </head>
 <body>
@@ -56,7 +56,7 @@
   <main class="d-flex justify-content-center align-items-center min-vh-100 flex-column">
     <section class="form-box p-4 bg-white rounded shadow">
       <h2 class="text-center mb-4">Cadastrar Novo Usuário</h2>
-      <form id="/cadastroForm">
+      <form id="cadastroForm">
         <div class="form-group">
           <label for="nome" id="labelNome">Nome</label>
           <input type="text" class="form-control" id="nome" name="nome" maxlength="60" required>
@@ -76,7 +76,7 @@
       </select>
         </div>
         <div class="form-group">
-            <label class="/classificacao" for="usuario" id="labelUsuario">Login</label>
+            <label class="classificacao" for="usuario" id="labelUsuario">Login</label>
             <input type="text" class="form-control" id="usuario" required maxlength="6">
 
         </div>
@@ -89,20 +89,20 @@
           <input type="text" class="form-control" id="mae" name="mae" minlength="15" maxlength="60" required>
         </div>
         <div class="form-group">
-          <label for="/cpf" id="/cpfLabel">CPF</label>
-          <input type="text" class="form-control" id="/cpf" name="/cpf" required>
+          <label for="cpf" id="cpfLabel">CPF</label>
+          <input type="text" class="form-control" id="cpf" name="cpf" required>
         </div>
         <div class="form-group">
-          <label for="/celular">Telefone Celular</label>
-          <input type="text" class="form-control" id="/celular" name="/celular" required>
+          <label for="celular">Telefone Celular</label>
+          <input type="text" class="form-control" id="celular" name="celular" required>
         </div>
         <div class="form-group">
           <label for="fixo">Telefone Fixo</label>
           <input type="text" class="form-control" id="fixo" name="fixo" required>
         </div>
         <div class="form-group">
-          <label  for="/cep" id="/cepLabel">CEP</label>
-          <input type="text" id="/cep" class="form-control" placeholder=00000-000 required />
+          <label  for="cep" id="cepLabel">CEP</label>
+          <input type="text" id="cep" class="form-control" placeholder=00000-000 required />
         </div>
         <div class="form-group">
           <label for="endereco">Endereço</label>
@@ -117,8 +117,8 @@
           <input type="text" class="form-control" id="bairro" placeholder="Bairro" disabled/>
       </div>
       <div class="form-group">
-        <label  for="/cidade">Cidade</label>
-        <input type="text" class="form-control" id="/cidade" placeholder="/cidade" disabled />
+        <label  for="cidade">Cidade</label>
+        <input type="text" class="form-control" id="cidade" placeholder="cidade" disabled />
         </div>
         <div class="form-group">
           <label  for="estado">Estado</label>
@@ -130,12 +130,12 @@
           <i class="fa fa-eye" id="olhoSenha" ></i>
         </div>
         <div class="form-group">
-          <label  for="/confirmarSenha" id="labelConfirmarsenha">Confirmar Senha</label>
-          <input  class="form-control" type="password" id="/confirmarSenha" maxlength="8" required />
+          <label  for="confirmarSenha" id="labelConfirmarsenha">Confirmar Senha</label>
+          <input  class="form-control" type="password" id="confirmarSenha" maxlength="8" required />
           <i class="fa fa-eye" id="olhoConfirm"></i>
       </div>
       <div class="form-group">
-        <button class="btnCadastrar" id="/cad">Cadastrar</button>
+        <button class="btnCadastrar" id="cad">Cadastrar</button>
         <p>Já tem conta?</p>
         <a href="html/login.html"  id="entrarLogin">Entrar</a>
       </div>
@@ -174,7 +174,7 @@
       </div>
       
 
-      <div class="/coluna coluna-internet">
+      <div class="coluna coluna-internet">
         <p><strong>Internet</strong></p>
         <ul>
           <li>Link dedicado</li>
@@ -183,7 +183,7 @@
         </ul>
       </div>
 
-      <div class="/coluna coluna-telefonia">
+      <div class="coluna coluna-telefonia">
         <p><strong>Telefonia</strong></p>
         <ul>
           <li>PABX IP Virtual</li>
@@ -192,7 +192,7 @@
         </ul>
       </div>
 
-      <div class="/coluna coluna-mobilidade">
+      <div class="coluna coluna-mobilidade">
         <p><strong>Mobilidade</strong></p>
         <ul>
           <li>Celular Empresarial</li>
@@ -200,7 +200,7 @@
         </ul>
       </div>
 
-      <div class="/coluna coluna-contato">
+      <div class="coluna coluna-contato">
         <p><a href="https://www.telecall.com/contato/">Contato</a></p>
       </div>
     </div>
