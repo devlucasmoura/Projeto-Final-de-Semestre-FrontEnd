@@ -22,14 +22,16 @@ class AuthManager {
 
  
     // função de logout
-    logout() {
-        this.currentUser = null;
-        localStorage.removeItem('loggedUser');
-        this.updateAuthUI();
-        
-        // Redireciona para a página inicial
-        window.location.href = 'index.html';
-    }
+        logout() {
+            this.currentUser = null;
+            localStorage.removeItem('loggedUser');
+            
+            
+            const isInsideHtml = window.location.pathname.includes('/html/');
+            const redirectPath = isInsideHtml ? '../index.html' : 'index.html';
+            
+            window.location.href = redirectPath;
+        }
 
     // verifica se o usuário está logado
     isLoggedIn() {
