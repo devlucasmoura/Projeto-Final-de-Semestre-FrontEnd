@@ -60,27 +60,36 @@ class AuthManager {
     }
 
     // atualiza a navegação baseada no status de login
-    updateNavigation() {
-        // atualiza os botões de autenticação na navbar
-        updateNavigation() {
-            const authButtons = document.getElementById('auth-buttons');
-            if (authButtons) {
-                if (this.isLoggedIn()) {
-                    authButtons.innerHTML = `
-                        <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
-                        <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
-                    `;
-                } else {
-                    const repoName = window.location.pathname.split('/')[1] || '';
-                    const basePath = repoName ? `/${repoName}/` : '/';
-                    
-                    authButtons.innerHTML = `
-                        <a href="${basePath}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
-                        <a href="${basePath}login.html" class="btn custom-btn-blue">Entrar</a>
-                    `;
-                }
+updateNavigation() {
+    const authButtons = document.getElementById('auth-buttons');
+    if (authButtons) {
+        if (this.isLoggedIn()) {
+            authButtons.innerHTML = `
+                <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
+                <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
+            `;
+        } else {
+            // Verifica se a URL termina com "/" (página principal ou subpasta)
+            const isRootPath = window.location.pathname.endsWith('/');
+            
+            // Se estiver na raiz (URL termina com "/"), usa "../html/"
+            // Caso contrário, usa caminho base normal (considerando repoName)
+            const repoName = window.location.pathname.split('/')[1] || '';
+            let basePath;
+            
+            if (isRootPath) {
+                basePath = '../html/'; // Volta uma pasta e entra em /html/
+            } else {
+                basePath = repoName ? `/${repoName}/` : '/';
             }
+            
+            authButtons.innerHTML = `
+                <a href="${basePath}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
+                <a href="${basePath}login.html" class="btn custom-btn-blue">Entrar</a>
+            `;
         }
+    }
+}
 
     // função para proteger páginas (opcional)
     requireLogin(redirectUrl = 'html/login.html') {
