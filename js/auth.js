@@ -65,6 +65,8 @@ class AuthManager {
 updateNavigation() {
     const authButtons = document.getElementById('auth-buttons');
     if (authButtons) {
+        const repoName = window.location.pathname.split('/')[1];
+        
         if (this.isLoggedIn()) {
             authButtons.innerHTML = `
                 <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
@@ -72,12 +74,13 @@ updateNavigation() {
             `;
         } else {
             authButtons.innerHTML = `
-                <a href="/html/cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
-                <a href="/html/login.html" class="btn custom-btn-blue">Entrar</a>
+                <a href="/${repoName}/html/cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
+                <a href="/${repoName}/html/login.html" class="btn custom-btn-blue">Entrar</a>
             `;
         }
     }
 }
+
 
 
 
