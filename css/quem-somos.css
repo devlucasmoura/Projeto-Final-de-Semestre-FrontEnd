@@ -304,6 +304,9 @@ body.dark-theme {
   .head-dark-theme img {
     content: url("/img/telecall-logo-white-1\ 2.png");
   }
+body.dark-theme #themeToggle svg {
+  filter: invert(1);
+}
     /* estilização da barra de navegação*/
 
   header {
