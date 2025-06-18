@@ -62,22 +62,23 @@ class AuthManager {
     // atualiza a navegação baseada no status de login
 
     // atualiza a navegação baseada no status de login
-    updateNavigation() {
-        const authButtons = document.getElementById('auth-buttons');
-        if (authButtons) {
-            if (this.isLoggedIn()) {
-                authButtons.innerHTML = `
-                    <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
-                    <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
-                `;
-            } else {
-                authButtons.innerHTML = `
-                    <a href="../html/cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
-                    <a href="../html/login.html" class="btn custom-btn-blue">Entrar</a>
-                `;
-            }
+updateNavigation() {
+    const authButtons = document.getElementById('auth-buttons');
+    if (authButtons) {
+        if (this.isLoggedIn()) {
+            authButtons.innerHTML = `
+                <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
+                <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
+            `;
+        } else {
+            authButtons.innerHTML = `
+                <a href="/html/cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
+                <a href="/html/login.html" class="btn custom-btn-blue">Entrar</a>
+            `;
         }
     }
+}
+
 
 
 
