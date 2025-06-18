@@ -370,9 +370,10 @@ body.dark-theme #themeToggle svg {
 /*estilização dos botões de aumentar/diminuir fonte */
 .acessibilidade-fonte {
   display: flex;
-  gap: 0px;
+  gap: 35px;
   margin-bottom: 0px;
   background-color: whitesmoke;
+
 }
 
 .acessibilidade-fonte .btnFonte {
@@ -380,7 +381,12 @@ body.dark-theme #themeToggle svg {
   font-size: 16px;
   border: none;
   cursor: pointer;
-  color: #000;
+  color: #000;  
+  text-decoration: none;
+}
+
+body.dark-theme .btnFonte {
+  color: #000 !important;
 }
 
 .textoAcessibilidade {
