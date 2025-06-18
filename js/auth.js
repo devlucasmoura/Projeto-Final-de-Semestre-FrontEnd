@@ -73,7 +73,7 @@ class AuthManager {
                 `;
             } else {
                 // verifica se estamos na página principal ou em subpáginas
-                const isMainPage = window.location.pathname.includes('index.html') || window.location.pathname === './';
+                const isMainPage = window.location.pathname.includes('index.html') || window.location.pathname === '/';
                 const pathPrefix = isMainPage ? 'html/' : './';
                 
                 authButtons.innerHTML = `
