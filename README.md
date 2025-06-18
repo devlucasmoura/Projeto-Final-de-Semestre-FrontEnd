@@ -35,7 +35,7 @@ https://vampbiel.github.io/Projeto-Final-de-Semestre-FrontEnd/
 - Botão de acessibilidade para aumentar fonte
 - Função de cadastro com localstorage
 - Função de login puxando os dados do localstorage
-- Função de login puxando os dados do localstorage
+- Função de logout
 - Responsividade para diversos dispositivos
 
 ## Instalação
