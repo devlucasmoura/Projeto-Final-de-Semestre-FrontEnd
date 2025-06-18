@@ -490,16 +490,17 @@ header .user-actions a:hover {
 /*estilização dos botões de aumentar/diminuir fonte */
 .acessibilidade-fonte {
   display: flex;
-  gap: 10px;
+  gap: 0px;
   margin-bottom: 0px;
   background-color: whitesmoke;
 }
 
-.acessibilidade-fonte button {
-  padding: 3px;
-  border-radius: 50px;
+.acessibilidade-fonte .btnFonte {
+  padding: 1px;
   font-size: 16px;
+  border: none;
   cursor: pointer;
+  color: #000;
 }
 
 .textoAcessibilidade {
