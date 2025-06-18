@@ -73,8 +73,9 @@ class AuthManager {
                 `;
             } else {
                 // verifica se estamos na página principal ou em subpáginas
-                const isMainPage = window.location.pathname.includes('index.html') || window.location.pathname === 'html/';
-                const pathPrefix = isMainPage ? 'html/' : '/';
+                    const isMainPage = window.location.pathname.includes('index.html') || window.location.pathname === '/';
+                    const pathPrefix = isMainPage ? 'html/' : './';
+
                 
                 authButtons.innerHTML = `
                     <a href="${pathPrefix}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
