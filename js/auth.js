@@ -72,8 +72,8 @@ class AuthManager {
                 `;
             } else {
                 authButtons.innerHTML = `
-                    <a href="/html/cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
-                    <a href="/html/login.html" class="btn custom-btn-blue">Entrar</a>
+                    <a href="../html/cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
+                    <a href="../html/login.html" class="btn custom-btn-blue">Entrar</a>
                 `;
             }
         }
