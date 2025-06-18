@@ -55,37 +55,32 @@ class AuthManager {
 
     // atualiza a interface baseada no status de login
     updateAuthUI() {
-
+        // atualiza a navegação
         this.updateNavigation();
     }
 
     // atualiza a navegação baseada no status de login
-
-    // atualiza a navegação baseada no status de login
-updateNavigation() {
-    const authButtons = document.getElementById('auth-buttons');
-    if (authButtons) {
-        if (this.isLoggedIn()) {
-            authButtons.innerHTML = `
-                <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
-                <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
-            `;
-        } else {
-            // URLs absolutas para "Cadastre-se" e "Entrar"
-            authButtons.innerHTML = `
-                <a href="Projeto-Final-de-Semestre-FrontEnd/html/cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
-                <a href="Projeto-Final-de-Semestre-FrontEnd/html/login.html" class="btn custom-btn-blue">Entrar</a>
-            `;
+    updateNavigation() {
+        // atualiza os botões de autenticação na navbar
+        const authButtons = document.getElementById('auth-buttons');
+        if (authButtons) {
+            if (this.isLoggedIn()) {
+                authButtons.innerHTML = `
+                    <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
+                    <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
+                `;
+            } else {
+                // verifica se estamos na página principal ou em subpáginas
+                const isMainPage = window.location.pathname.includes('index.html') || window.location.pathname === '/';
+                const pathPrefix = isMainPage ? 'html/' : './';
+                
+                authButtons.innerHTML = `
+                    <a href="${pathPrefix}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
+                    <a href="${pathPrefix}login.html" class="btn custom-btn-blue">Entrar</a>
+                `;
+            }
         }
     }
-}
-
-
-
-
-
-
-
 
     // função para proteger páginas (opcional)
     requireLogin(redirectUrl = 'html/login.html') {
