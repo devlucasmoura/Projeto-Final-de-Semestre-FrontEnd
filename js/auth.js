@@ -69,11 +69,17 @@ updateNavigation() {
                 <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
             `;
         } else {
-
-            const isRoot = window.location.pathname.split('/').filter(Boolean).length === 1;
+          
+            const isIndexPage = window.location.pathname.endsWith('index.html') || 
+                              window.location.pathname.endsWith('/');
+            
+     
+            const repoName = window.location.pathname.split('/')[1] || '';
             
 
-            const basePath = isRoot ? 'html/' : './';
+            const basePath = isIndexPage 
+                ? `/${repoName}/html/`  
+                : './html/';            
             
             authButtons.innerHTML = `
                 <a href="${basePath}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
