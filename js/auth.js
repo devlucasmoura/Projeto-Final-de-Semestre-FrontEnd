@@ -62,26 +62,26 @@ class AuthManager {
     // atualiza a navegação baseada no status de login
 
        // atualiza a navegação baseada no status de login
-    updateNavigation() {
-        const authButtons = document.getElementById('auth-buttons');
-        if (authButtons) {
-            if (this.isLoggedIn()) {
-                authButtons.innerHTML = `
-                    <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
-                    <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
-                `;
-            } else {
-                // Verifica se estamos na página principal ou em subpáginas
-                const isMainPage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
-                const pathPrefix = isMainPage ? 'html/' : '../';
-                
-                authButtons.innerHTML = `
-                    <a href="${pathPrefix}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
-                    <a href="${pathPrefix}login.html" class="btn custom-btn-blue">Entrar</a>
-                `;
+        updateNavigation() {
+            const authButtons = document.getElementById('auth-buttons');
+            if (authButtons) {
+                if (this.isLoggedIn()) {
+                    authButtons.innerHTML = `
+                        <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
+                        <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
+                    `;
+                } else {
+                    const depth = window.location.pathname.split('/').filter(Boolean).length;
+                    const pathPrefix = depth === 0 ? 'html/' : '../'.repeat(depth - 1);
+                    
+                    authButtons.innerHTML = `
+                        <a href="${pathPrefix}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
+                        <a href="${pathPrefix}login.html" class="btn custom-btn-blue">Entrar</a>
+                    `;
+                }
             }
         }
-    }
+
 
 
 
