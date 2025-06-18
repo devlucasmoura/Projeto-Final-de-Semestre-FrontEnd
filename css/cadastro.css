@@ -13,7 +13,19 @@
     color: #fff; 
     border-color: #007bff; 
 }
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: var(--date-icon-filter, invert(0)); 
+}
 
+
+input[type="date"]::-moz-calendar-picker-indicator {
+    filter: var(--date-icon-filter, invert(0));
+}
+
+
+.dark-theme {
+    --date-icon-filter: invert(1); 
+}
 
 #auth-buttons .active:hover {
     background-color: #0056b3; 
