@@ -71,22 +71,25 @@ updateNavigation() {
                 <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
             `;
         } else {
-        
-            const isInsideHtmlFolder = window.location.pathname.includes('/html/');
             
-
-            const repoName = window.location.pathname.split('/')[1] || '';
+            const isGitHubPages = window.location.host.includes('github.io');
             
-    
+           
+            const repoName = isGitHubPages ? window.location.pathname.split('/')[1] : '';
+            
+           
+            const isInsideHtml = window.location.pathname.includes('/html/');
+            
+           
             let basePath;
             
-            if (isInsideHtmlFolder) {
-                basePath = './'; 
+            if (isInsideHtml) {
+                basePath = './';
             } else if (window.location.pathname.endsWith('index.html') || 
-                      window.location.pathname.endsWith('/')) {
-                basePath = `/${repoName}/html/`; 
+                      window.location.pathname === '/' + (repoName ? repoName + '/' : '')) {
+                basePath = repoName ? `/${repoName}/html/` : 'html/'; 
             } else {
-                basePath = './html/'; 
+                basePath = repoName ? `/${repoName}/html/` : './html/'; 
             }
             
             authButtons.innerHTML = `
