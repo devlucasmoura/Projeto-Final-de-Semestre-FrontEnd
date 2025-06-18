@@ -70,10 +70,7 @@ updateNavigation() {
             `;
         } else {
 
-            const isRoot = window.location.pathname.split('/').filter(Boolean).length === 1;
-            
-
-            const basePath = isRoot ? 'html/' : './';
+            const basePath = 'html/';
             
             authButtons.innerHTML = `
                 <a href="${basePath}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
