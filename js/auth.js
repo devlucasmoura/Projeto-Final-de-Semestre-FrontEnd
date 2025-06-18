@@ -75,8 +75,8 @@ class AuthManager {
                 const pathPrefix = isMainPage ? 'html/' : './';
                 
                 authButtons.innerHTML = `
-                    <a href="${pathPrefix}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
-                    <a href="${pathPrefix}login.html" class="btn custom-btn-blue">Entrar</a>
+                    <a href="${pathPrefix}html/cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
+                    <a href="${pathPrefix}html/login.html" class="btn custom-btn-blue">Entrar</a>
                 `;
             }
         }
