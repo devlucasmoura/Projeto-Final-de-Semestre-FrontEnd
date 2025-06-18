@@ -453,6 +453,11 @@ header .user-actions a:hover {
   transform: rotate(180deg);
 }
 
+
+body.dark-theme .dropdown-content a {
+  color: #000;
+}
+
 /* estilização do botão de olhar a senha e o confirmar senha*/
 
 #olhoSenha{
