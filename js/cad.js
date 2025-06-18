@@ -85,7 +85,7 @@ nome.addEventListener('keyup', () => {
         validNome = false
 
     } else {
-        labelNome.setAttribute('style', 'color: green')
+        labelNome.style.color = 'green';
         labelNome.innerHTML = 'Nome Completo'
         nome.setAttribute('style', 'border-color: green')
         nome.style.borderWidth = '2px';
@@ -104,7 +104,7 @@ login.addEventListener('keyup', () => {
 
 
     } else {
-        labelLogin.setAttribute('style', 'color: green')
+        labelLogin.style.color = 'green';
         labelLogin.innerHTML = 'Login'
         login.setAttribute('style', 'border-color: green')
         login.style.borderWidth = '2px';
@@ -123,7 +123,7 @@ senha.addEventListener('keyup', () => {
 
 
     } else {
-        labelSenha.setAttribute('style', 'color: green')
+        labelSenha.style.color = 'green';
         labelSenha.innerHTML = 'Senha'
         senha.setAttribute('style', 'border-color: green')
         senha.style.borderWidth = '2px';
@@ -142,7 +142,7 @@ confirmarSenha.addEventListener('keyup', () => {
               validConfirmarSenha = false
 
             } else {
-              confirmarSenha.setAttribute('style','color: green');
+              confirmarSenha.style.color = 'green';
               confirmarSenha.setAttribute('style', 'border-color: green');
               labelConfirmarsenha.setAttribute('style', 'color: green', 'border-color: green');
               labelConfirmarsenha.innerHTML = 'Confirmar Senha'
