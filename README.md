@@ -22,7 +22,7 @@ Desafios extras concluídos:
 - [Lucas da Silva de Moura](https://github.com/devlucasmoura)
 - [Fabio Sued](https://github.com/FabioSued)
 - [Vitor da Silva](https://github.com/Vitonhu)
-- [Flavio]()
+- [Flávio Martins dos Santos Junior](https://github.com/Flavioj7)
 
 ## Demonstração
 
