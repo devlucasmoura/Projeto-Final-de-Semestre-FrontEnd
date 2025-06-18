@@ -70,10 +70,10 @@ updateNavigation() {
             `;
         } else {
 
-            const isRootPath = window.location.pathname.endsWith('/');
+            const isRoot = window.location.pathname.split('/').filter(Boolean).length === 1;
             
 
-            const basePath = isRootPath ? '../html/' : './';
+            const basePath = isRoot ? 'html/' : './';
             
             authButtons.innerHTML = `
                 <a href="${basePath}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
@@ -83,7 +83,7 @@ updateNavigation() {
     }
 }
 
-    // função para proteger páginas (opcional)
+    // função para proteger páginas 
     requireLogin(redirectUrl = 'html/login.html') {
         if (!this.isLoggedIn()) {
             alert('Você precisa estar logado para acessar esta página!');
@@ -111,17 +111,17 @@ function logout() {
     authManager.logout();
 }
 
-// função global para verificar login (para compatibilidade)
+// função global para verificar login 
 function isLoggedIn() {
     return authManager.isLoggedIn();
 }
 
-// função global para obter usuário atual (para compatibilidade)
+// função global para obter usuário atual 
 function getCurrentUser() {
     return authManager.getCurrentUser();
 }
 
-// atualiza a interface a cada 5 segundos (para sincronizar entre abas)
+// atualiza a interface a cada 5 segundos 
 setInterval(() => {
     const wasLoggedIn = authManager.isLoggedIn();
     authManager.checkLoginStatus();
