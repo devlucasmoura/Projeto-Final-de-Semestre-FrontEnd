@@ -53,7 +53,7 @@ function login() {
 
     setTimeout(() => {
       window.location.href = '../index.html';
-    }, 3000);
+    }, 1000);
   } else {
       erro.innerHTML= "Senha ou Usuário incorretos."
       erro.style.color = 'red'
