@@ -65,21 +65,21 @@ class AuthManager {
 updateNavigation() {
     const authButtons = document.getElementById('auth-buttons');
     if (authButtons) {
-        const repoName = window.location.pathname.split('/')[1];
-        
         if (this.isLoggedIn()) {
             authButtons.innerHTML = `
                 <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
                 <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
             `;
         } else {
+            // URLs absolutas para "Cadastre-se" e "Entrar"
             authButtons.innerHTML = `
-                <a href="/${repoName}/html/cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
-                <a href="/${repoName}/html/login.html" class="btn custom-btn-blue">Entrar</a>
+                <a href="Projeto-Final-de-Semestre-FrontEnd/html/cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
+                <a href="Projeto-Final-de-Semestre-FrontEnd/html/login.html" class="btn custom-btn-blue">Entrar</a>
             `;
         }
     }
 }
+
 
 
 
