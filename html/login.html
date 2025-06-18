@@ -143,28 +143,46 @@
   </footer>
 
   <script>
+// função para atualizar a cor dos ícones de olho baseado no tema
+function updateEyeIcons() {
+    const eyeIcons = document.querySelectorAll('.fa-eye, .fa-eye-slash');
+    const isDarkMode = document.body.classList.contains('dark-theme');
+    
+    eyeIcons.forEach(icon => {
+        if (isDarkMode) {
+            icon.style.color = '#ffffff'; // Branco no modo dark
+        } else {
+            icon.style.color = '#000000'; // Preto no modo light
+        }
+    });
+}
+
+// código existente do tema com as modificações
 const toggleButton = document.getElementById('themeToggle');
 const header = document.getElementById('header');
 
-// faz verificação se tem tema salvo no localstorage
+// verificação do tema salvo
 const temaSalvo = localStorage.getItem('theme');
 if (temaSalvo === 'dark') {
     document.body.classList.add('dark-theme');
     header.classList.add('head-dark-theme');
 }
 
+// atualiza os ícones quando a página carrega
+document.addEventListener('DOMContentLoaded', updateEyeIcons);
+
 toggleButton.addEventListener('click', function() {
     // alterna as classes
     document.body.classList.toggle('dark-theme');
     header.classList.toggle('head-dark-theme');
     
-    // salva o tema no localstorage
-    if (document.body.classList.contains('dark-theme')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
-    }
+    // salva o tema
+    localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+    
+    // atualiza a cor dos ícones
+    updateEyeIcons();
 });
+
   </script>
 
   <script src="../js/dropdown.js"></script>
