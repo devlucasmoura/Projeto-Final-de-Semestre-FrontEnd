@@ -62,25 +62,25 @@ class AuthManager {
     // atualiza a navegação baseada no status de login
     updateNavigation() {
         // atualiza os botões de autenticação na navbar
-        const authButtons = document.getElementById('auth-buttons');
-        if (authButtons) {
-            if (this.isLoggedIn()) {
-                authButtons.innerHTML = `
-                    <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
-                    <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
-                `;
-            } else {
-                // verifica se estamos na página principal ou em subpáginas
-                const isMainPage = window.location.pathname.includes('index.html') || window.location.pathname === '/';
-                const pathPrefix = isMainPage ? '/Projeto-Final-de-Semestre-FrontEnd/html/' : './';
-                
-                authButtons.innerHTML = `
-                    <a href="${pathPrefix}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
-                    <a href="${pathPrefix}login.html" class="btn custom-btn-blue">Entrar</a>
-                `;
+        updateNavigation() {
+            const authButtons = document.getElementById('auth-buttons');
+            if (authButtons) {
+                if (this.isLoggedIn()) {
+                    authButtons.innerHTML = `
+                        <span class="text-success me-2">Olá, ${this.currentUser.login}!</span>
+                        <button onclick="authManager.logout()" class="btn btn-danger">Logout</button>
+                    `;
+                } else {
+                    const repoName = window.location.pathname.split('/')[1] || '';
+                    const basePath = repoName ? `/${repoName}/` : '/';
+                    
+                    authButtons.innerHTML = `
+                        <a href="${basePath}cadastro.html" class="btn custom-btn-red me-2">Cadastre-se</a>
+                        <a href="${basePath}login.html" class="btn custom-btn-blue">Entrar</a>
+                    `;
+                }
             }
         }
-    }
 
     // função para proteger páginas (opcional)
     requireLogin(redirectUrl = 'html/login.html') {
