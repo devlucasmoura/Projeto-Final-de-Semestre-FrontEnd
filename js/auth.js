@@ -55,12 +55,11 @@ class AuthManager {
 
     // atualiza a interface baseada no status de login
     updateAuthUI() {
-        // atualiza a navegação
+
         this.updateNavigation();
     }
 
     // atualiza a navegação baseada no status de login
-// ... (código anterior )
 
     updateNavigation() {
         const authButtons = document.getElementById('auth-buttons');
