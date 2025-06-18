@@ -131,7 +131,7 @@ setInterval(() => {
     if (wasLoggedIn !== isLoggedInNow) {
         authManager.updateAuthUI();
     }
-}, 5000);
+}, 1000);
 
 console.log('Sistema de Autenticação carregado!');
 
