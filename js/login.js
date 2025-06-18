@@ -44,6 +44,9 @@ function login() {
   }
 
   if (user) {
+      // Salva o usuário logado no localStorage
+      localStorage.setItem('loggedUser', JSON.stringify(user));
+      
       erro.innerHTML= "Login bem-sucedido!"
       erro.style.color = 'green'
       erro.style.textAlign = 'center'
