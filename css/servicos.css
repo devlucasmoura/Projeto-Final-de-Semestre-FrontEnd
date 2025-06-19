@@ -31,15 +31,14 @@ body {
     background-color: transparent;
     margin: 0 15px; /* Ajustado para melhor alinhamento */
 }
-    
-#auth-buttons {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    width: fit-content; 
-    margin-left: auto; 
-    margin-right: 0; /* Alinhado à direita */
-}
+    #auth-buttons {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: fit-content; 
+        margin-left: auto; 
+        margin-right: auto; /* Centralizado */
+    }
 
 
     .btn-danger {
@@ -266,41 +265,17 @@ body {
       font-size: 18px;
     }
 
-    .navbar {
-        flex-wrap: nowrap; /* Garante que os itens do navbar não quebrem linha */
-        justify-content: space-between; /* Distribui o espaço entre os itens */
-        padding: 10px; /* Ajusta o padding para telas menores */
-    }
-
-    #auth-buttons {
-        margin-left: auto; /* Mantém os botões de autenticação à direita */
-        margin-right: 0;
-    }
-
     .hamburguer {
         display: block; /* Mostra o hambúrguer em telas menores */
-        order: 1; /* Garante que o hambúrguer apareça primeiro */
     }
 
     #themeToggle {
-        order: 2; /* Garante que o themeToggle apareça depois do hambúrguer */
         margin-left: 10px; /* Adiciona um pequeno espaçamento */
     }
 
-    .navbar-brand {
-        order: 3; /* Coloca o brand depois do hambúrguer e themeToggle */
-        margin-right: auto; /* Empurra o brand para a esquerda */
-    }
 
-    .navbar img {
-        order: 4; /* Coloca a imagem depois do brand */
-    }
-
-    .ms-4 {
-        order: 5; /* Coloca os botões de autenticação por último */
-    }
   }
-  
+
   /* Modo Escuro */
 body.dark-theme {
     background-color: #121212;
@@ -558,10 +533,8 @@ header .user-actions a:hover {
   font-size: inherit; 
 }
 
-/*media queries para responsividade do site inteiro*/
 @media (max-width: 768px) {
-
-      .hamburguer {
+       .hamburguer {
       display: block;
     }
     .hamburguer.active .barra:nth-child(2) {
@@ -579,7 +552,7 @@ header .user-actions a:hover {
             z-index: 200;
 
     }
-   .menuMobile {
+    .menuMobile {
       display: flex;
       position: fixed;
       right: -100%;
@@ -592,21 +565,20 @@ header .user-actions a:hover {
       transition: 0.3s;
       z-index: 100;
     }
+    
     .menuMobile a {
       margin: 16px 0;
       text-align: center;
     }
     .menuMobile.active {
         right: 0;
-          
     }
-
-  
-}
-
+      
+  }
 
 
 
+/* Responsividade para o footer */
 @media (max-width: 768px) {
   .lista-inferior {
     grid-template-columns: 1fr;
@@ -639,6 +611,7 @@ header .user-actions a:hover {
     font-size: 18px;
   }
 
+  /* Remove bordas verticais em mobile */
   .lista-inferior > .coluna:nth-child(5n+3),
   .lista-inferior > .coluna:nth-child(5n+6) {
     border-left: none;
@@ -649,26 +622,64 @@ header .user-actions a:hover {
 @media (max-width: 480px) {
   .img-coluna {
     flex-direction: column;
+    gap: 10px;
   }
 }
 
 
-
-
+/* Responsividade para o conteúdo principal */
 @media (max-width: 768px) {
-  #serviços {
+  #titulo-pagina {
     font-size: 1.5em;
+    padding: 15px 0;
   }
 
-  .imagem-central {
-    max-width: 90%;
+  .suporte-conteudo {
     height: auto;
+    padding: 20px 10px;
+    margin: 10px auto;
   }
 
-  .bloco-cinza {
-    width: 90%;
+  .imagem-suporte {
+    max-width: 150px;
+    margin: 15px 0;
+  }
+
+  .bloco-vermelho {
+    padding: 15px;
+    margin: 0 10px;
+  }
+
+  .bloco-vermelho li {
+    font-size: 14px;
+    margin-bottom: 8px;
   }
 }
 
+@media (max-width: 480px) {
+  #titulo-pagina {
+    font-size: 1.3em;
+    padding: 12px 0;
+  }
 
+  .suporte-conteudo {
+    padding: 15px 5px;
+  }
 
+  .imagem-suporte {
+    max-width: 120px;
+  }
+
+  .bloco-vermelho {
+    padding: 12px;
+    margin: 0 5px;
+  }
+
+  .bloco-vermelho li {
+    font-size: 13px;
+  }
+}
+
+     .head-dark-theme #auth-buttons span {
+    color: white;
+   }
