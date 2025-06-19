@@ -18,6 +18,9 @@ body {
     background-color: #0056b3; 
     border-color: #004085; 
 }
+   .head-dark-theme #auth-buttons span {
+    color: white;
+   }
 
   /*estilização dos links*/
 
