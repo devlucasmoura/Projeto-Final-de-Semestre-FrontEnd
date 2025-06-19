@@ -99,6 +99,9 @@ html, body {
     padding: 10px 0;
     position: relative;
   }
+   .head-dark-theme #auth-buttons span {
+    color: white;
+   }
   
   .logo-area::after {
     content: "";
