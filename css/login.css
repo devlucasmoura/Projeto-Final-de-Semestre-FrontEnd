@@ -45,6 +45,9 @@ body {
     margin: 50px 15px;
     background-color: transparent;
     }
+ body.dark-theme #themeToggle svg {
+    filter: invert(1);
+  }
     
 #auth-buttons {
     display: flex; 
