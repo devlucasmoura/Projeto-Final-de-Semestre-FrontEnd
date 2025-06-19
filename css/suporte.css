@@ -60,6 +60,9 @@ body {
 .btn-danger:focus {
     box-shadow: 0 0 0 0.2rem rgba(220,53,69,.5); 
 }
+   .head-dark-theme #auth-buttons span {
+    color: white;
+   }
 .navbar{
     display: flex;
     flex-wrap: wrap;
