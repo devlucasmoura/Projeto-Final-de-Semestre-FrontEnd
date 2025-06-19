@@ -20,24 +20,25 @@ body {
 
 .navbar{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-right: 20px;
-    margin-top: 10px;
+    align-items: center; /* Adicionado para alinhar verticalmente */
+    padding: 10px 20px; /* Adicionado padding para melhor espaçamento */
+    flex-wrap: nowrap; /* Alterado para evitar quebra de linha */
 }
+
 #themeToggle {
     border: none;
-    margin: 50px 15px;
     background-color: transparent;
-    }
+    margin: 0 15px; /* Ajustado para melhor alinhamento */
+}
     
 #auth-buttons {
     display: flex; 
     justify-content: center; 
     align-items: center; 
     width: fit-content; 
-    margin-left: auto !important; 
-    margin-right: auto !important; 
+    margin-left: auto; 
+    margin-right: 0; /* Alinhado à direita */
 }
 
 
@@ -263,6 +264,40 @@ body {
   
     .coluna-contato {
       font-size: 18px;
+    }
+
+    .navbar {
+        flex-wrap: nowrap; /* Garante que os itens do navbar não quebrem linha */
+        justify-content: space-between; /* Distribui o espaço entre os itens */
+        padding: 10px; /* Ajusta o padding para telas menores */
+    }
+
+    #auth-buttons {
+        margin-left: auto; /* Mantém os botões de autenticação à direita */
+        margin-right: 0;
+    }
+
+    .hamburguer {
+        display: block; /* Mostra o hambúrguer em telas menores */
+        order: 1; /* Garante que o hambúrguer apareça primeiro */
+    }
+
+    #themeToggle {
+        order: 2; /* Garante que o themeToggle apareça depois do hambúrguer */
+        margin-left: 10px; /* Adiciona um pequeno espaçamento */
+    }
+
+    .navbar-brand {
+        order: 3; /* Coloca o brand depois do hambúrguer e themeToggle */
+        margin-right: auto; /* Empurra o brand para a esquerda */
+    }
+
+    .navbar img {
+        order: 4; /* Coloca a imagem depois do brand */
+    }
+
+    .ms-4 {
+        order: 5; /* Coloca os botões de autenticação por último */
     }
   }
   
@@ -634,5 +669,6 @@ header .user-actions a:hover {
     width: 90%;
   }
 }
+
 
 
