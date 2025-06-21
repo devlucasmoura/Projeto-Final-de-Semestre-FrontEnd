@@ -15,7 +15,7 @@ Desafios extras concluídos:
 - Botão para modo claro/escuro ✅ 
 - Botão para aumentar/diminuir a fonte ✅
 ## Autores
-
+### Grupo 013
 - [Gabriel da Silva Rocha](https://github.com/vampbiel)
 - [Robert Gabriel do Nascimento Correa](https://github.com/Robert19014)
 - [Roberta Fernandes Farias Cruz de Oliveira](https://github.com/Kyujus)
